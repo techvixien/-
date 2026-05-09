@@ -1,6 +1,3 @@
-from email.mime import message
-from discord import message
-
 import discord
 from discord.ext import commands
 from datetime import timedelta
@@ -8,7 +5,9 @@ from datetime import timedelta
 # =========================
 # BOT TOKEN
 # =========================
-TOKEN = "MTUwMTg5NTMxNDA5MTY3NTcwOA.GqjHh2.MyzQT-qMcQ4we2C7RbRigyCwGi5n9kftlDXBbc"
+import os
+
+TOKEN = os.getenv("TOKEN")
 # =========================
 # INTENTS
 # =========================
@@ -81,10 +80,6 @@ async def on_message(message):
                 )
 
                 return
-
-    # =========================
-    # ANTI LINK
-    # =========================
 
     # =========================
     # ANTI LINK
